@@ -14,7 +14,7 @@ import (
 	"strings"
 )
 
-const VERSION = "v1.0.0"
+const VERSION = "v1.0.1"
 
 // SyncApi 同步接口定义
 type SyncApi interface {

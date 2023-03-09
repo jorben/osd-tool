@@ -1,0 +1,19 @@
+# 存储对象 cos 或者 oss （分别是腾讯云和阿里云）
+storage: cos
+upload:
+  ignore: [ .git, .idea, .DS_Store ]
+  list:
+    - source: /Users/HayWolf/Downloads/sync1
+      dest: /syncTest/dir1
+    - source: /Users/HayWolf/Downloads/sync2
+      dest: /syncTest/2dir
+download:
+  list:
+    - source: /syncTest
+      dest: /Users/HayWolf/Downloads/downloadTest
+osd:
+  secret_id:
+  secret_key:
+  bucket: # 存储桶名称
+  region:  # 替换成存储桶的区域代码，比如Oss的cn-shenzhen，比如Cos的ap-guangzhou
+  timeout: 300 #单位：秒

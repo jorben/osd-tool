@@ -13,7 +13,7 @@ jobs:
         id: create_release
         uses: actions/create-release@v1
         env:
-          GITHUB_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: ${{ github.ref }}
           release_name: osd-tool ${{ github.ref }}
@@ -64,7 +64,7 @@ jobs:
       - name: upload linux amd64
         uses: actions/upload-release-asset@v1
         env:
-          GITHUB_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ needs.release.outputs.upload_url }}
           asset_path: osd-tool_linux_amd64.tgz
@@ -74,7 +74,7 @@ jobs:
       - name: upload linux arm64
         uses: actions/upload-release-asset@v1
         env:
-          GITHUB_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ needs.release.outputs.upload_url }}
           asset_path: osd-tool_linux_arm64.tgz
@@ -84,7 +84,7 @@ jobs:
       - name: upload darwin amd64
         uses: actions/upload-release-asset@v1
         env:
-          GITHUB_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ needs.release.outputs.upload_url }}
           asset_path: osd-tool_darwin_amd64.tgz
@@ -94,7 +94,7 @@ jobs:
       - name: upload darwin arm64
         uses: actions/upload-release-asset@v1
         env:
-          GITHUB_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ needs.release.outputs.upload_url }}
           asset_path: osd-tool_darwin_arm64.tgz
@@ -104,7 +104,7 @@ jobs:
 #      - name: upload windows amd64
 #        uses: actions/upload-release-asset@v1
 #        env:
-#          GITHUB_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 #        with:
 #          upload_url: ${{ needs.release.outputs.upload_url }}
 #          asset_path: osd-tool_windows_amd64.tgz

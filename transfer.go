@@ -59,14 +59,14 @@ func (t *CloudTransfer) Upload() error {
 		log.Printf("begin to upload, from local: %s, to osd: %s", dir.Source, dir.Dest)
 		err := filepath.Walk(dir.Source, func(path string, info fs.FileInfo, err error) error {
 			if info == nil {
-				log.Printf("no such file or directory:%s", path)
+				log.Printf("no such file or directory: %s", path)
 				return nil
 			}
 
 			if info.IsDir() {
 				// 跳过需要忽略的文件夹
 				if helper.InArray(info.Name(), t.Config.Upload.Ignore) {
-					log.Printf("skipping a dir:%s", path)
+					log.Printf("skipping a dir: %s", path)
 					return filepath.SkipDir
 				}
 				log.Printf("into dir:%s", path)

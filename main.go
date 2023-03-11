@@ -9,6 +9,7 @@ import (
 	"io"
 	"log"
 	"os"
+	"strings"
 )
 
 const Version = "v1.0.2"
@@ -21,6 +22,18 @@ func loadConfig(path string) *config.TransferConfig {
 	cfg := &config.TransferConfig{}
 	if err := conf.LoadAndDecode(path, cfg); err != nil {
 		return nil
+	}
+	// 处理Path中带有~的情况，替换为真实绝对路径
+	homeDir, _ := os.UserHomeDir()
+	for i, p := range cfg.Upload.List {
+		if len(p.Source) > 0 && "~" == p.Source[0:1] {
+			cfg.Upload.List[i].Source = strings.Replace(p.Source, "~", homeDir, 1)
+		}
+	}
+	for i, p := range cfg.Download.List {
+		if len(p.Dest) > 0 && "~" == p.Dest[0:1] {
+			cfg.Download.List[i].Dest = strings.Replace(p.Dest, "~", homeDir, 1)
+		}
 	}
 	return cfg
 }
@@ -43,7 +56,7 @@ func doMakeConfig(path string) error {
 	if _, err := io.WriteString(dest, string(buf)); err != nil {
 		return err
 	}
-	log.Printf("Configuration file initialization completed, look at %s\n", path)
+	fmt.Printf("Configuration file initialization completed, look at %s\n", path)
 	return nil
 }
 

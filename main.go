@@ -26,12 +26,12 @@ func loadConfig(path string) *config.TransferConfig {
 	// 处理Path中带有~的情况，替换为真实绝对路径
 	homeDir, _ := os.UserHomeDir()
 	for i, p := range cfg.Upload.List {
-		if len(p.Source) > 1 && "~" == p.Source[0:1] {
+		if len(p.Source) > 0 && "~" == p.Source[0:1] {
 			cfg.Upload.List[i].Source = strings.Replace(p.Source, "~", homeDir, 1)
 		}
 	}
 	for i, p := range cfg.Download.List {
-		if len(p.Dest) > 1 && "~" == p.Dest[0:1] {
+		if len(p.Dest) > 0 && "~" == p.Dest[0:1] {
 			cfg.Download.List[i].Dest = strings.Replace(p.Dest, "~", homeDir, 1)
 		}
 	}

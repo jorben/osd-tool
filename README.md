@@ -72,3 +72,6 @@ osd:
   region:  # 替换成存储桶的区域代码，比如Oss的cn-shenzhen，比如Cos的ap-guangzhou
   timeout: 300 #单位：秒
 ```
+
+## License
+Released under the [MIT License](LICENSE).

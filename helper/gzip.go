@@ -8,7 +8,7 @@ import (
 	"path/filepath"
 )
 
-// 解压缩tgz压缩包
+// Unarchive 解压缩tgz压缩包
 func Unarchive(src string, dest string) error {
 	// 打开压缩包
 	f, err := os.Open(src)

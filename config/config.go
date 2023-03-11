@@ -1,9 +1,9 @@
-package entity
+package config
 
 import "gopkg.in/yaml.v3"
 
-// SyncConfig 同步配置
-type SyncConfig struct {
+// TransferConfig 同步配置
+type TransferConfig struct {
 	Storage string `yaml:"storage"`
 	Upload  struct {
 		List   []Path   `yaml:"list"`
@@ -28,7 +28,7 @@ type Path struct {
 }
 
 func GetConfigDemo() []byte {
-	buf, _ := yaml.Marshal(SyncConfig{
+	buf, _ := yaml.Marshal(TransferConfig{
 		Storage: "",
 		Upload: struct {
 			List   []Path   `yaml:"list"`

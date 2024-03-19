@@ -3,7 +3,7 @@ package provider
 import (
 	"context"
 	"fmt"
-	"github.com/HayWolf/osd-tool/config"
+	"github.com/jorben/osd-tool/config"
 	"github.com/tencentyun/cos-go-sdk-v5"
 	"log"
 	"net/http"

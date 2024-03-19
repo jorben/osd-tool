@@ -2,8 +2,8 @@ package provider
 
 import (
 	"fmt"
-	"github.com/HayWolf/osd-tool/config"
 	"github.com/aliyun/aliyun-oss-go-sdk/oss"
+	"github.com/jorben/osd-tool/config"
 	"log"
 	"strings"
 	"time"

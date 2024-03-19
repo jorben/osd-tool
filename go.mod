@@ -1,4 +1,4 @@
-module github.com/HayWolf/osd-tool
+module github.com/jorben/osd-tool
 
 go 1.19
 

@@ -3,9 +3,9 @@ package main
 import (
 	"errors"
 	"fmt"
-	"github.com/HayWolf/osd-tool/config"
-	"github.com/HayWolf/osd-tool/helper"
-	"github.com/HayWolf/osd-tool/provider"
+	"github.com/jorben/osd-tool/config"
+	"github.com/jorben/osd-tool/helper"
+	"github.com/jorben/osd-tool/provider"
 	"io/fs"
 	"log"
 	"os"

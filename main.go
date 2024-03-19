@@ -3,7 +3,7 @@ package main
 import (
 	"errors"
 	"fmt"
-	"github.com/HayWolf/osd-tool/config"
+	"github.com/jorben/osd-tool/config"
 	conf "github.com/ldigit/config"
 	"github.com/urfave/cli/v2"
 	"io"
@@ -12,8 +12,8 @@ import (
 	"strings"
 )
 
-const Version = "v1.0.2"
-const RepoName = "HayWolf/osd-tool"
+const Version = "v1.0.3"
+const RepoName = "jorben/osd-tool"
 const BinName = "osd-tool_{os}_{arch}"
 const PackageName = "osd-tool_{os}_{arch}.tgz"
 

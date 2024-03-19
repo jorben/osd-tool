@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"github.com/HayWolf/osd-tool/helper"
+	"github.com/jorben/osd-tool/helper"
 	"github.com/schollz/progressbar/v3"
 	"io"
 	"log"

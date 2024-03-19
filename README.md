@@ -2,17 +2,17 @@
 
 腾讯云(cos)或阿里云(oss)的对象存储 目录上传、下载工具，当前只是简单的全量上传和下载，用于跨服务商迁移文件、跨设备迁移文件、内容备份等场景
 
-[![Go](https://github.com/HayWolf/osd-tool/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/HayWolf/osd-tool/actions/workflows/build.yml)
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/HayWolf/osd-tool)](https://github.com/HayWolf/osd-tool/releases)
-[![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/HayWolf/osd-tool)](https://github.com/HayWolf/osd-tool/blob/master/go.mod)
+[![Go](https://github.com/jorben/osd-tool/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/jorben/osd-tool/actions/workflows/build.yml)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/jorben/osd-tool)](https://github.com/jorben/osd-tool/releases)
+[![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/jorben/osd-tool)](https://github.com/jorben/osd-tool/blob/master/go.mod)
 [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg)](http://copyfree.org)
-[![Go Report](https://goreportcard.com/badge/github.com/HayWolf/osd-tool)](https://goreportcard.com/report/github.com/HayWolf/osd-tool)
+[![Go Report](https://goreportcard.com/badge/github.com/jorben/osd-tool)](https://goreportcard.com/report/github.com/jorben/osd-tool)
 
 ## 用法
 
 ```shell
 # 有golang环境时可以通过go install下载安装，或者直接下载当前项目发布的包
-go install github.com/HayWolf/osd-tool@latest
+go install github.com/jorben/osd-tool@latest
 
 # 首次使用时候可以通过init命令初始化配置文件模版，默认生成config.yaml文件
 osd-tool init
@@ -44,9 +44,9 @@ storage: cos
 ```yaml
 upload:
   list:
-    - source: /Users/HayWolf/Downloads/sync1
+    - source: /Users/Jorben/Downloads/sync1
       dest: /syncTest/dir1
-    - source: /Users/HayWolf/Downloads/sync2
+    - source: /Users/Jorben/Downloads/sync2
       dest: /syncTest/2dir
   ignore: [ .git, .DS_Store ] # 需要忽略的文件和文件夹
 ```
@@ -59,7 +59,7 @@ upload:
 download:
   list:
     - source: /syncTest
-      dest: /Users/HayWolf/Downloads/downloadTest
+      dest: /Users/Jorben/Downloads/downloadTest
 ```
 
 ### 对象存储配置

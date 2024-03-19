@@ -3,14 +3,14 @@ storage: cos
 upload:
   ignore: [ .git, .idea, .DS_Store ]
   list:
-    - source: /Users/HayWolf/Downloads/sync1
+    - source: /Users/Jorben/Downloads/sync1
       dest: /syncTest/dir1
-    - source: /Users/HayWolf/Downloads/sync2
+    - source: /Users/Jorben/Downloads/sync2
       dest: /syncTest/2dir
 download:
   list:
     - source: /syncTest
-      dest: /Users/HayWolf/Downloads/downloadTest
+      dest: /Users/Jorben/Downloads/downloadTest
 osd:
   secret_id:
   secret_key:
